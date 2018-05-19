@@ -3,18 +3,18 @@ using System.Collections.Generic;
 
 namespace DatabaseFirstDemo.Data.Models
 {
-    public partial class Departments
+    public partial class Department
     {
-        public Departments()
+        public Department()
         {
-            Employees = new HashSet<Employees>();
+            Employees = new HashSet<Employee>();
         }
 
         public int DepartmentId { get; set; }
         public string Name { get; set; }
         public int ManagerId { get; set; }
 
-        public Employees Manager { get; set; }
-        public ICollection<Employees> Employees { get; set; }
+        public Employee Manager { get; set; }
+        public ICollection<Employee> Employees { get; set; }
     }
 }
