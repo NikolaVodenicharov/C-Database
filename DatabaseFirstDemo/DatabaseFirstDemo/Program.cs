@@ -1,12 +1,29 @@
-﻿using System;
+﻿using DatabaseFirstDemo.Data;
+using System;
+using System.Linq;
 
 namespace DatabaseFirstDemo
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            using(var context = new SoftUniDbContext())
+            {
+                var employees = context.Employees.Select(e => new
+                {
+                    e.FirstName,
+                    e.EmployeesProjects.Count
+
+                }).ToList();
+
+                foreach (var employee in employees)
+                {
+                    Console.WriteLine(employee.FirstName + " " + employee.Count);
+                }
+            }
+
+            Console.WriteLine("hi");
         }
     }
 }

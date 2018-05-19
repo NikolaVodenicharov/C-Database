@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace DatabaseFirstDemo.Data.Models
+﻿namespace DatabaseFirstDemo.Data.Models
 {
-    public partial class EmployeeProject
+    public class EmployeeProject
     {
         public int EmployeeId { get; set; }
-        public int ProjectId { get; set; }
-
         public Employee Employee { get; set; }
+
+        public int ProjectId { get; set; }
         public Project Project { get; set; }
     }
 }

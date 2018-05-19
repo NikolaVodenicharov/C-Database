@@ -3,11 +3,10 @@ using System.Collections.Generic;
 
 namespace DatabaseFirstDemo.Data.Models
 {
-    public partial class Project
+    public class Project
     {
         public Project()
         {
-            EmployeesProjects = new HashSet<EmployeeProject>();
         }
 
         public int ProjectId { get; set; }
@@ -16,6 +15,6 @@ namespace DatabaseFirstDemo.Data.Models
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
 
-        public ICollection<EmployeeProject> EmployeesProjects { get; set; }
+        public ICollection<EmployeeProject> EmployeesProjects { get; set; } = new HashSet<EmployeeProject>();
     }
 }
