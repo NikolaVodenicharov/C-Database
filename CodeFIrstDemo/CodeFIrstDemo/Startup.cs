@@ -27,7 +27,7 @@ namespace CodeFIrstDemo
 
         private static void ResetDatabase(ForumDbContext context)
         {
-            context.Database.EnsureCreated();
+            context.Database.EnsureDeleted();
             context.Database.Migrate();
             Seed(context);
             
