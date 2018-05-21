@@ -19,6 +19,6 @@ namespace Hospital.Models
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public ICollection<PatientMedicament> Perscriptions { get; set; } = new HashSet<PatientMedicament>();
+        public ICollection<PatientMedicament> Prescriptions { get; set; } = new HashSet<PatientMedicament>();
     }
 }

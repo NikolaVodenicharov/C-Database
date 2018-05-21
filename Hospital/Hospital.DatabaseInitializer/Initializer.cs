@@ -7,7 +7,7 @@
 
     using Microsoft.EntityFrameworkCore;
 
-    public class DatabaseInitializer
+    public class Initializer
     {
         private static Random rnd = new Random();
 
@@ -31,12 +31,10 @@
 
             SeedPrescriptions(context);
         }
-
         private static void SeedMedicaments(HospitalDbContext context)
         {
             MedicamentGenerator.InitialMedicamentSeed(context);
         }
-
         public static void SeedPatients(HospitalDbContext context, int count)
         {
             for (int i = 0; i < count; i++)
@@ -46,7 +44,6 @@
 
             context.SaveChanges();
         }
-
         private static void SeedPrescriptions(HospitalDbContext context)
         {
             PrescriptionGenerator.InitialPrescriptionSeed(context);

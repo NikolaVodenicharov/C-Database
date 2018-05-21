@@ -14,12 +14,12 @@ namespace Hospital.Data.ConfigurationClasses
 
             builder
                 .HasOne(pm => pm.Patient)
-                .WithMany(p => p.Perscriptions)
+                .WithMany(p => p.Prescriptions)
                 .HasForeignKey(pm => pm.PatientId);
 
             builder
                 .HasOne(pm => pm.Medicament)
-                .WithMany(m => m.Perscriptions)
+                .WithMany(m => m.Prescriptions)
                 .HasForeignKey(pm => pm.MedicamentId);
         }
     }

@@ -19,11 +19,6 @@ namespace Hospital.Data.ConfigurationClasses
                 .IsRequired(true)
                 .IsUnicode(true)
                 .HasMaxLength(250);
-
-            builder
-                .HasOne(v => v.Doctor)
-                .WithMany(d => d.Visitations)
-                .HasForeignKey(v => v.DoctorId);
         }
     }
 }

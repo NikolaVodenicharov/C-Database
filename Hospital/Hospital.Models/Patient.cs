@@ -28,6 +28,6 @@ namespace Hospital.Models
 
         public ICollection<Diagnosis> Diagnoses { get; set; } = new HashSet<Diagnosis>();
         public ICollection<Visitation> Visitations { get; set; } = new HashSet<Visitation>();
-        public ICollection<PatientMedicament> Perscriptions { get; set; } = new HashSet<PatientMedicament>();
+        public ICollection<PatientMedicament> Prescriptions { get; set; } = new HashSet<PatientMedicament>();
     }
 }

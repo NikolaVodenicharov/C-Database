@@ -1,12 +1,19 @@
-﻿using System;
+﻿using Hospital.Data;
+using System;
+using Hospital.DatabaseInitializer;
 
 namespace Hospital.App
 {
-    class Startup
+    public class Startup
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //using (var db = new HospitalDbContext())
+            //{
+            //    DatabaseInitializer.
+            //}
+
+            Console.WriteLine("Hi");
         }
     }
 }

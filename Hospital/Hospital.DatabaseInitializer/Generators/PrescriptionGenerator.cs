@@ -12,9 +12,9 @@
         {
             Random rnd = new Random();
 
-            int[] allMedicamentIds = context.Medicaments.Select(d => d.MedicamentId).ToArray();
+            int[] allMedicamentIds = context.Medicaments.Select(d => d.Id).ToArray();
 
-            int[] allPatientIds = context.Patients.Select(p => p.PatientId).ToArray();
+            int[] allPatientIds = context.Patients.Select(p => p.Id).ToArray();
 
             foreach (int patientId in allPatientIds)
             {
@@ -45,13 +45,13 @@
 
                     prescriptions.Add(prescription);
                 }
-                context.Patients.Find(patientId). = prescriptions;
+                context.Patients.Find(patientId).Prescriptions = prescriptions;
             }
 
             context.SaveChanges();
         }
 
-        public static void NewPrescription(int patientId, int medicamentId, HospitalContext context)
+        public static void NewPrescription(int patientId, int medicamentId, HospitalDbContext context)
         {
             var prescription = new PatientMedicament()
             {
@@ -63,7 +63,7 @@
             context.SaveChanges();
         }
 
-        public static void NewPrescription(Patient patient, Medicament medicament, HospitalContext context)
+        public static void NewPrescription(Patient patient, Medicament medicament, HospitalDbContext context)
         {
             var prescription = new PatientMedicament()
             {
