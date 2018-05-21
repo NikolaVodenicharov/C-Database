@@ -8,10 +8,10 @@ namespace Hospital.App
     {
         public static void Main(string[] args)
         {
-            //using (var db = new HospitalDbContext())
-            //{
-            //    DatabaseInitializer.
-            //}
+            using (var db = new HospitalDbContext())
+            {
+                Initializer.ResetDatabase();
+            }
 
             Console.WriteLine("Hi");
         }
