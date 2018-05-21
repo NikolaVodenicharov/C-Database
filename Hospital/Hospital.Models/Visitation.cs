@@ -11,11 +11,12 @@ namespace Hospital.Models
 
         }
 
-        public Visitation(string comment, DateTime date, Patient patient)
+        public Visitation(string comment, DateTime date, Patient patient, Doctor doctor)
         {
             this.Comment = comment;
             this.Date = date;
             this.Patient = patient;
+            this.Doctor = doctor;
         }
 
         public int Id { get; set; }
@@ -24,5 +25,8 @@ namespace Hospital.Models
 
         public int PatientId { get; set; }
         public Patient Patient { get; set; }
+
+        public int DoctorId { get; set; }
+        public Doctor Doctor { get; set; }
     }
 }
