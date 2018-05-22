@@ -45,7 +45,7 @@ namespace Hospital.DatabaseInitializer.Generators
 
         public static void Generate(string medicamentName, HospitalDbContext context)
         {
-            context.Medicaments.Add(new Medicament() { Name = medicamentName });
+            context.Medicaments.Add(new Medicament(medicamentName));
         }
     }
 }

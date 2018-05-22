@@ -11,9 +11,8 @@ namespace Hospital.Models
 
         }
 
-        public Visitation(string comment, DateTime date, Patient patient)
+        public Visitation( DateTime date, Patient patient)
         {
-            this.Comment = comment;
             this.Date = date;
             this.Patient = patient;
         }

@@ -17,6 +17,12 @@ namespace Hospital.Models
             this.Medicament = medicament;
         }
 
+        public PatientMedicament(int patientId, int medicamentId)
+        {
+            this.PatientId = patientId;
+            this.MedicamentId = medicamentId;
+        }
+
         public int PatientId { get; set; }
         public Patient Patient { get; set; }
 

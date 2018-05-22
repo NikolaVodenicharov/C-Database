@@ -14,21 +14,15 @@
         {
             string firstName = NameGenerator.FirstName();
             string lastName = NameGenerator.LastName();
+            string email = EmailGenerator.NewEmail(firstName + lastName);
+            string address = AddressGenerator.NewAddress();
 
-            var patient = new Patient()
-            {
-                FirstName = firstName,
-                LastName = lastName,
-                Email = EmailGenerator.NewEmail(firstName + lastName),
-                Address = AddressGenerator.NewAddress(),
-            };
-
+            var patient = new Patient(firstName, lastName, email, true, address);
             patient.Visitations = GenerateVisitations(patient);
             patient.Diagnoses = GenerateDiagnoses(patient);
 
             return patient;
         }
-
         private static Diagnosis[] GenerateDiagnoses(Patient patient)
         {
             var diagnoseNames = new string[] 
@@ -73,7 +67,6 @@
 
             return diagnoses;
         }
-
         private static Visitation[] GenerateVisitations(Patient patient)
         {
             int visitationCount = rnd.Next(1, 5);
@@ -84,18 +77,13 @@
             {
                 var visitationDate = RandomDay(2005);
 
-                var visitation = new Visitation()
-                {
-                    Date = visitationDate,
-                    Patient = patient
-                };
+                var visitation = new Visitation(visitationDate, patient);
 
                 visitations[i] = visitation;
             }
 
             return visitations;
         }
-
         private static DateTime RandomDay(int startYear)
         {
             DateTime start = new DateTime(startYear, 1, 1);

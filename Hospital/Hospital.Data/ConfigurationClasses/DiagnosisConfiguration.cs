@@ -23,7 +23,7 @@ namespace Hospital.Data.ConfigurationClasses
             builder
                 .Property(d => d.Comment)
                 .HasMaxLength(250)
-                .IsRequired(true)
+                .IsRequired(false)
                 .IsUnicode(true);
                     
         }
