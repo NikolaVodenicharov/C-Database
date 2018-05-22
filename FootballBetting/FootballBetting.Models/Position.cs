@@ -8,5 +8,7 @@ namespace FootballBetting.Models
     {
         public int PositionId { get; set; }
         public string Name { get; set; }
+
+        public ICollection<Player> Players { get; set; } = new HashSet<Player>();
     }
 }

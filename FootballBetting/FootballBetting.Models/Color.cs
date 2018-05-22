@@ -8,5 +8,8 @@ namespace FootballBetting.Models
     {
         public int ColorId { get; set; }
         public string Name { get; set; }
+
+        public ICollection<Team> TeamsPrimaryKitColor { get; set; } = new HashSet<Team>();
+        public ICollection<Team> TeamsSecondaryKitColor { get; set; } = new HashSet<Team>();
     }
 }
