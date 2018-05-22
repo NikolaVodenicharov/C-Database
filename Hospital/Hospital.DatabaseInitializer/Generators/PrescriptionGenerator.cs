@@ -16,15 +16,13 @@
             foreach (int patientId in allPatientIds)
             {
                 int[] medicamentIds = GenerateMedicamentIds(allMedicamentIds);
-
-                HashSet<PatientMedicament> prescriptions = GeneratePerscriptions(patientId, medicamentIds);
+                ICollection<PatientMedicament> prescriptions = GeneratePerscriptions(patientId, medicamentIds);
 
                 context.Patients.Find(patientId).Prescriptions = prescriptions;
             }
 
             context.SaveChanges();
         }
-
         private static HashSet<PatientMedicament> GeneratePerscriptions(int patientId, int[] medicamentIds)
         {
             var prescriptions = new HashSet<PatientMedicament>();
@@ -36,7 +34,6 @@
 
             return prescriptions;
         }
-
         private static int[] GenerateMedicamentIds(int[] allMedicamentIds)
         {
             Random rnd = new Random();

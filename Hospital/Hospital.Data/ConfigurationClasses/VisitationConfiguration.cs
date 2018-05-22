@@ -16,9 +16,18 @@ namespace Hospital.Data.ConfigurationClasses
 
             builder
                 .Property(v => v.Comment)
-                .IsRequired(true)
+                .IsRequired(false)
                 .IsUnicode(false)
                 .HasMaxLength(250);
+
+            builder
+                .Property(v => v.Date)
+                .IsRequired(true);
+
+            builder
+                .HasOne(v => v.Patient)
+                .WithMany(p => p.Visitations)
+                .HasForeignKey(v => v.PatientId);
         }
     }
 }

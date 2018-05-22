@@ -3,6 +3,8 @@
     using Hospital.Data;
     using Hospital.Models;
     using System;
+    using System.Collections.Generic;
+
     //using System.IO;
 
 
@@ -23,9 +25,30 @@
 
             return patient;
         }
-        private static Diagnosis[] GenerateDiagnoses(Patient patient)
+        
+        private static HashSet<Visitation> GenerateVisitations(Patient patient)
         {
-            var diagnoseNames = new string[] 
+            int visitationCount = rnd.Next(1, 5);
+            var visitations = new HashSet<Visitation>(visitationCount);
+
+            for (int i = 0; i < visitationCount; i++)
+            {
+                var visitationDate = RandomDay(2005);
+                var visitation = new Visitation(visitationDate, patient);
+                visitations.Add(visitation);
+            }
+
+            return visitations;
+        }
+        private static DateTime RandomDay(int startYear)
+        {
+            DateTime start = new DateTime(startYear, 1, 1);
+            int range = (DateTime.Today - start).Days;
+            return start.AddDays(rnd.Next(range));
+        }
+        private static HashSet<Diagnosis> GenerateDiagnoses(Patient patient)
+        {
+            var diagnoseNames = new string[]
             {
                 "Limp Scurvy",
                 "Fading Infection",
@@ -51,44 +74,15 @@
             //var diagnoseNames = File.ReadAllLines("<INSERT DIR HERE>");
 
             int diagnoseCount = rnd.Next(1, 4);
-            var diagnoses = new Diagnosis[diagnoseCount];
+            var diagnoses = new HashSet<Diagnosis>(diagnoseCount);
             for (int i = 0; i < diagnoseCount; i++)
             {
                 string diagnoseName = diagnoseNames[rnd.Next(diagnoseNames.Length)];
-
-                var diagnosis = new Diagnosis()
-                {
-                    Name = diagnoseName,
-                    Patient = patient
-                };
-
-                diagnoses[i] = diagnosis;
+                var diagnosis = new Diagnosis(diagnoseName, patient);
+                diagnoses.Add(diagnosis);
             }
 
             return diagnoses;
-        }
-        private static Visitation[] GenerateVisitations(Patient patient)
-        {
-            int visitationCount = rnd.Next(1, 5);
-
-            var visitations = new Visitation[visitationCount];
-
-            for (int i = 0; i < visitationCount; i++)
-            {
-                var visitationDate = RandomDay(2005);
-
-                var visitation = new Visitation(visitationDate, patient);
-
-                visitations[i] = visitation;
-            }
-
-            return visitations;
-        }
-        private static DateTime RandomDay(int startYear)
-        {
-            DateTime start = new DateTime(startYear, 1, 1);
-            int range = (DateTime.Today - start).Days;
-            return start.AddDays(rnd.Next(range));
         }
     }
 }

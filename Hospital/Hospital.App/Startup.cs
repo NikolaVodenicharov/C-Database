@@ -8,8 +8,6 @@ namespace Hospital.App
     {
         public static void Main(string[] args)
         {
-            Initializer.ResetDatabase();
-
             Console.WriteLine("Hi");
         }
     }

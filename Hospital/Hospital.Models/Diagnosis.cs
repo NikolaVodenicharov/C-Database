@@ -11,10 +11,9 @@ namespace Hospital.Models
 
         }
 
-        public Diagnosis(string name, string comment, Patient patient)
+        public Diagnosis(string name, Patient patient)
         {
             this.Name = name;
-            this.Comment = comment;
             this.Patient = patient;
         }
 

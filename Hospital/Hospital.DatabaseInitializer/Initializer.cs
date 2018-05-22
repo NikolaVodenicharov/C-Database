@@ -16,9 +16,7 @@
             using (var context = new HospitalDbContext())
             {
                 context.Database.EnsureDeleted();
-
                 context.Database.Migrate();
-
                 InitialSeed(context);
             }
         }
@@ -26,9 +24,7 @@
         public static void InitialSeed(HospitalDbContext context)
         {
             SeedMedicaments(context);
-
             SeedPatients(context, 200);
-
             SeedPrescriptions(context);
         }
         private static void SeedMedicaments(HospitalDbContext context)
