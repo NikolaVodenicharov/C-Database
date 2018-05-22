@@ -22,6 +22,8 @@ namespace Hospital.Data
         public DbSet<Patient> Patients { get; set; }
         public DbSet<PatientMedicament> PatientMedicaments { get; set; }
         public DbSet<Visitation> Visitations { get; set; }
+        public DbSet<Doctor> Doctors { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
             base.OnConfiguring(builder);
@@ -39,6 +41,7 @@ namespace Hospital.Data
             builder.ApplyConfiguration(new PatientConfiguration());
             builder.ApplyConfiguration(new PatientMedicamentConfiguration());
             builder.ApplyConfiguration(new VisitationConfiguration());
+            builder.ApplyConfiguration(new DoctorConfiguration());
         }
     }
 }

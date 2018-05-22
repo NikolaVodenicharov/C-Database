@@ -28,6 +28,15 @@ namespace Hospital.Data.ConfigurationClasses
                 .HasOne(v => v.Patient)
                 .WithMany(p => p.Visitations)
                 .HasForeignKey(v => v.PatientId);
+
+            builder
+                .HasOne(v => v.Doctor)
+                .WithMany(d => d.Visitations)
+                .HasForeignKey(v => v.DoctorId);
+
+            builder
+                .Property(v => v.DoctorId)
+                .IsRequired(false);
         }
     }
 }
