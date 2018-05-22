@@ -8,6 +8,11 @@ namespace Hospital.App
     {
         public static void Main(string[] args)
         {
+            using (var context = new HospitalDbContext())
+            {
+                Initializer.InitialSeed(context);
+            }
+
             Console.WriteLine("Hi");
         }
     }
