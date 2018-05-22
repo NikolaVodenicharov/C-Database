@@ -5,4 +5,9 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FootballBetting.Data\FootballBetting.Data.csproj" />
+    <ProjectReference Include="..\FootballBetting.Models\FootballBetting.Models.csproj" />
+  </ItemGroup>
+
 </Project>
