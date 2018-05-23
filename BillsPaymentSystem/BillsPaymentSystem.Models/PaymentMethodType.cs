@@ -4,7 +4,9 @@ using System.Text;
 
 namespace BillsPaymentSystem.Models
 {
-    class PaymentMethodType
+    public enum PaymentMethodType
     {
+        BankAccount,
+        CreditCard
     }
 }
