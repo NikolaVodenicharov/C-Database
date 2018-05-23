@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillsPaymentSystem.App", "BillsPaymentSystem.App\BillsPaymentSystem.App.csproj", "{391248DF-9A50-42A7-8CB9-2E2CD65BF86A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillsPaymentSystem.Models", "BillsPaymentSystem.Models\BillsPaymentSystem.Models.csproj", "{63466ED9-C379-4149-8D68-240D6D1D5DC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{391248DF-9A50-42A7-8CB9-2E2CD65BF86A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{391248DF-9A50-42A7-8CB9-2E2CD65BF86A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{391248DF-9A50-42A7-8CB9-2E2CD65BF86A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63466ED9-C379-4149-8D68-240D6D1D5DC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63466ED9-C379-4149-8D68-240D6D1D5DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63466ED9-C379-4149-8D68-240D6D1D5DC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63466ED9-C379-4149-8D68-240D6D1D5DC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
