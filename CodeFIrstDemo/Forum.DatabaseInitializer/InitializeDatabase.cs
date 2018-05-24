@@ -5,7 +5,7 @@ using System;
 
 namespace Forum.DatabaseInitializer
 {
-    public class DatabaseInitializer
+    public class InitializeDatabase
     {
         public static void ResetDatabase(ForumDbContext context)
         {

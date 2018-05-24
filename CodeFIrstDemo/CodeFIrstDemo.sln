@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forum.Models", "Forum.Models\Forum.Models.csproj", "{CDA75BE6-EAA1-4552-B34B-36E5D2B8E26F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forum.Models", "Forum.Models\Forum.Models.csproj", "{CDA75BE6-EAA1-4552-B34B-36E5D2B8E26F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forum.Data", "Forum.Data\Forum.Data.csproj", "{87599E68-F829-4F2E-957F-62861D243B92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forum.Data", "Forum.Data\Forum.Data.csproj", "{87599E68-F829-4F2E-957F-62861D243B92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forum.Client", "Forum.Client\Forum.Client.csproj", "{49EC2B29-D9A3-47E2-99A6-52E09CD467CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forum.Client", "Forum.Client\Forum.Client.csproj", "{49EC2B29-D9A3-47E2-99A6-52E09CD467CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forum.DatabaseInitializer", "Forum.DatabaseInitializer\Forum.DatabaseInitializer.csproj", "{44621E4A-E7B1-4980-8C65-3412983533C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forum.DatabaseInitializer", "Forum.DatabaseInitializer\Forum.DatabaseInitializer.csproj", "{44621E4A-E7B1-4980-8C65-3412983533C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

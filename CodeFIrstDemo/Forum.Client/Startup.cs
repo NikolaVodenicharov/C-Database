@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Forum.Data;
+using Forum.DatabaseInitializer;
+using System;
 
 namespace Forum.Client
 {
@@ -6,7 +8,7 @@ namespace Forum.Client
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
         }
     }
 }

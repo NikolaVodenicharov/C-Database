@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Forum.DatabaseInitializer\Forum.DatabaseInitializer.csproj" />
     <ProjectReference Include="..\Forum.Data\Forum.Data.csproj" />
   </ItemGroup>
 
