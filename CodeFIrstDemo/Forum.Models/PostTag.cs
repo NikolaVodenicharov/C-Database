@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CodeFIrstDemo.Data.Models
+namespace Forum.Models
 {
     public class PostTag
     {

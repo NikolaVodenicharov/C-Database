@@ -1,7 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
@@ -12,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\Models\" />
+    <ProjectReference Include="..\Forum.Models\Forum.Models.csproj" />
   </ItemGroup>
 
 </Project>

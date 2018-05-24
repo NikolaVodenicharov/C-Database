@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CodeFIrstDemo.Data.Models
+namespace Forum.Models
 {
-    public class Tag
+    public class Category
     {
-        public Tag()
+        public Category()
         {
 
         }
 
-        public Tag(string name)
+        public Category(string name)
         {
             this.Name = name;
         }
@@ -20,6 +20,6 @@ namespace CodeFIrstDemo.Data.Models
 
         public string Name { get; set; }
 
-        public ICollection<PostTag> PostTags { get; set; } = new HashSet<PostTag>();
+        public ICollection<Post> Posts { get; set; } = new HashSet<Post>();
     }
 }
