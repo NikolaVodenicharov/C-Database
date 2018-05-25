@@ -33,7 +33,7 @@ namespace Forum.Services.UserServices
         {
             User user = context
                 .Users
-                .Single(u => 
+                .SingleOrDefault(u => 
                     u.Username == username &&
                     u.Password == password);
 

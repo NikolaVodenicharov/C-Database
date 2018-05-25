@@ -21,7 +21,7 @@ namespace Forum.Client.Manager.Commands
             var username = arguments[0];
             var password = arguments[1];
 
-            var user = service.Create(username, password);
+            service.Create(username, password);
 
             return Message;
         }
