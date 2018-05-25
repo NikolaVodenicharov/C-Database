@@ -7,11 +7,13 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.3" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Forum.DatabaseInitializer\Forum.DatabaseInitializer.csproj" />
     <ProjectReference Include="..\Forum.Data\Forum.Data.csproj" />
+    <ProjectReference Include="..\Services\Forum.Services.csproj" />
   </ItemGroup>
 
 </Project>
