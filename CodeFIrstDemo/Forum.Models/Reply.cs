@@ -10,6 +10,16 @@ namespace Forum.Models
         {
 
         }
+        private Reply(string content)
+        {
+            this.Content = content;
+        }
+        public Reply(User author, Post post, string content)
+            : this(content)
+        {
+            this.Author = author;
+            this.Post = post;
+        }
 
         public int Id { get; set; }
 

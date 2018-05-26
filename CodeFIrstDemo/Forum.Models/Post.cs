@@ -10,20 +10,17 @@ namespace Forum.Models
         {
 
         }
-
         private Post(string title, string content)
         {
             this.Title = title;
             this.Content = content;
         }
-
         public Post(string title, string content, Category category, User author)
             : this(title, content)
         {
             this.Category = category;
             this.Author = author;
         }
-
         public Post(string title, string content, int categoryId, int authorId)
             : this(title, content)
         {
@@ -32,9 +29,7 @@ namespace Forum.Models
         }
 
         public int Id { get; set; }
-
         public string Title { get; set; }
-
         public string Content { get; set; }
 
         public int CategoryId { get; set; }
@@ -44,7 +39,6 @@ namespace Forum.Models
         public User Author { get; set; }
 
         public ICollection<Reply> Replies { get; set; } = new HashSet<Reply>();
-
         public ICollection<PostTag> PostTags { get; set; } = new HashSet<PostTag>();
     }
 }
