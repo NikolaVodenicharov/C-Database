@@ -7,6 +7,6 @@ namespace Forum.Services.Interfaces
 {
     public interface IPostService
     {
-
+        Post Create(string title, string content, string categoryName, int userId);
     }
 }

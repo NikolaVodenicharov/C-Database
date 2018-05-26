@@ -7,8 +7,8 @@ namespace Forum.Services.Interfaces
 {
     public interface ICategoryService
     {
-        Category ById(int id);
         Category ByName(string name);
         Category Create(string name);
+        Category EnsureCreate(string name);
     }
 }

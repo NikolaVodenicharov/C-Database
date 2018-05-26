@@ -6,7 +6,7 @@ namespace Forum.Models
 {
     public class Category
     {
-        public Category()
+        private Category()
         {
 
         }

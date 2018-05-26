@@ -19,10 +19,7 @@
             var password = arguments[1];
 
             var user = service.ByUsernameAndPassword(username, password);
-            if (user == null)
-            {
-                return "Invalid username or password";
-            }
+
 
             Session.User = user;
 

@@ -6,7 +6,7 @@ namespace Forum.Models
 {
     public class Tag
     {
-        public Tag()
+        private Tag()
         {
 
         }

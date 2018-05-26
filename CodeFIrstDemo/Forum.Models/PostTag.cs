@@ -6,7 +6,7 @@ namespace Forum.Models
 {
     public class PostTag
     {
-        public PostTag()
+        private PostTag()
         {
 
         }

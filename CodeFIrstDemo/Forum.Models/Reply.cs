@@ -6,7 +6,7 @@ namespace Forum.Models
 {
     public class Reply
     {
-        public Reply()
+        private Reply()
         {
 
         }

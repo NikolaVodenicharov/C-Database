@@ -6,7 +6,7 @@ namespace Forum.Models
 {
     public class Post
     {
-        public Post()
+        private Post()
         {
 
         }

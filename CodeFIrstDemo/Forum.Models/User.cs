@@ -6,7 +6,7 @@ namespace Forum.Models
 {
     public class User
     {
-        public User()
+        private User()
         {
 
         }

@@ -6,6 +6,7 @@ namespace Forum.Client
     using Forum.Client.Manager;
     using Forum.Client.Manager.CommandInterpreters;
     using Forum.Data;
+    using Forum.Services;
     using Forum.Services.Interfaces;
     using Forum.Services.UserServices;
     using Microsoft.EntityFrameworkCore;
@@ -33,6 +34,8 @@ namespace Forum.Client
 
             serviceCollection.AddDbContext<ForumDbContext>(options => options.UseSqlServer(Connection.ConnectionString));
             serviceCollection.AddTransient<IUserService, UserService>();
+            serviceCollection.AddTransient<ICategoryService, CategoryService>();
+            serviceCollection.AddTransient<IPostService, PostService>();
 
             var serviceProvider = serviceCollection.BuildServiceProvider();
 
