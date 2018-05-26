@@ -1,10 +1,7 @@
-﻿using Forum.Services.UserServices;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Forum.Client.Manager.Commands
+﻿namespace Forum.Client.Manager.Commands
 {
+    using Forum.Services.Interfaces;
+
     public class LoginCommand : IExecutable
     {
         private const string Message = "Logged succesfully.";

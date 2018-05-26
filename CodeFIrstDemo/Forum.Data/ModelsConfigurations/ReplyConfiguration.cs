@@ -15,6 +15,11 @@ namespace Forum.Data.ModelsConfigurations
                 .HasKey(r => r.Id);
 
             builder
+                .Property(r => r.Content)
+                .IsRequired()
+                .HasMaxLength(1000);
+
+            builder
                 .HasOne(r => r.Author)
                 .WithMany(a => a.Replies)
                 .HasForeignKey(r => r.AuthorId);

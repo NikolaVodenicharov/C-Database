@@ -8,6 +8,6 @@ namespace Forum.Services.Interfaces
     public interface IReplyService
     {
         Reply Create();
-        void Delete(int replyId)
+        void Delete(int replyId);
     }
 }

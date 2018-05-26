@@ -15,6 +15,16 @@ namespace Forum.Data.ModelsConfigurations
                 .HasKey(p => p.Id);
 
             builder
+                .Property(p => p.Title)
+                .IsRequired()
+                .HasMaxLength(50);
+
+            builder
+                .Property(p => p.Content)
+                .IsRequired()
+                .HasMaxLength(1000);
+
+            builder
                 .HasOne(p => p.Author)
                 .WithMany(a => a.Posts)
                 .HasForeignKey(p => p.AuthorId);

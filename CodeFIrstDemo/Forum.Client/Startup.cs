@@ -1,15 +1,17 @@
-﻿using Forum.Client.IO;
-using Forum.Client.Manager;
-using Forum.Client.Manager.CommandInterpreters;
-using Forum.Data;
-using Forum.DatabaseInitializer;
-using Forum.Services.UserServices;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using System;
+﻿
 
 namespace Forum.Client
 {
+    using Forum.Client.IO;
+    using Forum.Client.Manager;
+    using Forum.Client.Manager.CommandInterpreters;
+    using Forum.Data;
+    using Forum.Services.Interfaces;
+    using Forum.Services.UserServices;
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.Extensions.DependencyInjection;
+    using System;
+
     public class Startup
     {
         public static void Main(string[] args)

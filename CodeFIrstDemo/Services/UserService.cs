@@ -19,6 +19,7 @@ namespace Forum.Services.UserServices
 
             return user;
         }
+
         public User ByUsername(string username)
         {
             User user =
@@ -28,6 +29,7 @@ namespace Forum.Services.UserServices
 
             return user;
         }
+
         public User ByUsernameAndPassword(string username, string password)
         {
             User user = 
@@ -39,15 +41,30 @@ namespace Forum.Services.UserServices
 
             return user;
         }
+
         public User Create(string username, string password)
         {
-            // check is that username already exist. We can put unique constraint for username in database.
+            //if (this.IsUsernameBusy(username))
+            //{
+            //    throw new InvalidOperationException("Username is busy.");
+            //}
+
             User user = new User(username, password);
             this.GetContext.Users.Add(user);
             this.GetContext.SaveChanges();
 
             return user;
         }
+        private bool IsUsernameBusy(string username)
+        {
+            if (this.ByUsername(username) == null)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         public void Delete(int id)
         {
             User user = this.GetContext.Users.Find(id);

@@ -13,6 +13,15 @@ namespace Forum.Data.ModelsConfigurations
         {
             builder
                 .HasKey(u => u.Id);
+
+            builder
+                .Property(u => u.Username)
+                .IsRequired()
+                .HasMaxLength(50);
+
+            builder
+                .HasIndex(u => u.Username)
+                .IsUnique();
         }
     }
 }
