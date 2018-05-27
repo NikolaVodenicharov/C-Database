@@ -2,6 +2,6 @@
 {
     internal class ServerConfig
     {
-        internal static string ConnectionString => "Server=.;Database=PhotoShare;Integrated Security=True;";
+        internal static string ConnectionString => @"Server=.\SQLEXPRESS;Database=PhotoShare;Integrated Security=True;";
     }
 }

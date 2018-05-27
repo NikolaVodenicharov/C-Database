@@ -28,9 +28,7 @@
         public Picture ProfilePicture { get; set; }
 
         public string FirstName { get; set; }
-
         public string LastName { get; set; }
-
         public string FullName => $"{this.FirstName} {this.LastName}";
 
         public int? BornTownId { get; set; }
@@ -40,18 +38,14 @@
         public Town CurrentTown { get; set; }
 
         public DateTime? RegisteredOn { get; set; }
-
         public DateTime? LastTimeLoggedIn { get; set; }
 
         [Age]
         public int? Age { get; set; }
-
         public bool? IsDeleted { get; set; }
 
         public ICollection<Friendship> FriendsAdded { get; set; }
-
         public ICollection<Friendship> AddedAsFriendBy { get; set; }
-
         public ICollection<AlbumRole> AlbumRoles { get; set; }
 
         public override string ToString()

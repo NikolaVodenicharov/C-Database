@@ -16,11 +16,8 @@
         }
 
         public int Id { get; set; }
-
         public string Name { get; set; }
-
         public Color? BackgroundColor { get; set; }
-
         public bool IsPublic { get; set; }
 
         public ICollection<AlbumRole> AlbumRoles
@@ -28,13 +25,11 @@
             get { return this.albumRoles; }
             set { this.albumRoles = value; }
         }
-
         public ICollection<Picture> Pictures
         {
             get { return this.pictures; }
             set { this.pictures = value; }
         }
-
         public ICollection<AlbumTag> AlbumTags
         {
             get { return this.albumTags; }
